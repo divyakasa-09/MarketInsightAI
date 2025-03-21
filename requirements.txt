@@ -1,0 +1,7 @@
+llama-index==0.12.14
+llama-index-llms-openai==0.3.14
+llama-index-graph-stores-neo4j==0.4.6
+llama-index-embeddings-openai==0.3.1
+openai==1.60.2
+requests==2.32.3
+bs4==0.0.2
