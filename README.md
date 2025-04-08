@@ -1,21 +1,22 @@
 
 
 
-# 📊 MarketInsightAI: Real-Time Financial Insights Using Neo4j & Generative AI
+# 📊 MarketInsightAI: Real-Time Financial Insights Using Neo4j & LLaMA
 
-**MarketInsightAI** is a real-time financial analysis system that scrapes the web for the latest market data, structures it into a knowledge graph using Neo4j, and delivers insightful, context-aware reports using Retrieval-Augmented Generation (RAG) with OpenAI GPT-4o.
+**MarketInsightAI** is a real-time financial analysis system that scrapes the web for market data, structures it into a knowledge graph using Neo4j, and delivers insightful, context-aware reports using Retrieval-Augmented Generation (RAG) powered by **LLaMA** and **LlamaIndex**.
 
-This project goes beyond simple sentiment classification — it intelligently connects financial data (stocks, sectors, trends) and generates tailored responses based on user queries. Whether you're analyzing EV stocks, renewable energy, or AI startups, MarketInsightAI can help you extract actionable insights from real-time data.
+This project intelligently connects financial entities (stocks, sectors, risks, sentiment) and produces tailored, LLM-generated insights for any finance-related query — including trends in EV, renewable energy, and AI startups.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Scrapes **real-time financial news, stock feeds, and market reports**  
-- ✅ Builds a **Neo4j knowledge graph** to model entities & relationships  
-- ✅ Embeds data using **OpenAI** and indexes it with **LlamaIndex**  
-- ✅ Answers financial queries using **GPT-4o + knowledge graph context**  
-- ✅ Outputs structured, AI-generated **reports with insights & suggestions**
+- ✅ Scrapes **real-time financial news and market reports** via Google Search API  
+- ✅ Builds a **Neo4j knowledge graph** to capture financial entities & relationships  
+- ✅ Embeds documents using **HuggingFace sentence-transformers**  
+- ✅ Uses **LLaMA (local `.bin` model via `llama-cpp-python`)** for text generation  
+- ✅ Leverages **LlamaIndex** to implement a robust Retrieval-Augmented Generation pipeline  
+- ✅ Generates structured, investor-ready **financial reports**
 
 ---
 
@@ -29,48 +30,57 @@ This project goes beyond simple sentiment classification — it intelligently co
 
 ## 🛠️ Tech Stack
 
-| Component       | Tech                                |
-|----------------|--------------------------------------|
-| Language        | Python 3.10                          |
-| Scraping        | Google Search API, BeautifulSoup     |
-| LLM             | OpenAI GPT-4o                        |
-| Graph DB        | Neo4j                                |
-| Embedding/RAG   | LlamaIndex                           |
-| Others          | NestAsyncIO, Requests, Pandas        |
+| Component       | Technology/Library                            |
+|----------------|------------------------------------------------|
+| Language        | Python 3.10                                   |
+| Scraping        | Google Search API, BeautifulSoup              |
+| Graph Database  | Neo4j                                         |
+| Embedding Model | `sentence-transformers/all-MiniLM-L6-v2`      |
+| LLM             | LLaMA (via `llama-cpp-python`, local `.bin`)  |
+| RAG Framework   | LlamaIndex                                    |
+| Other Libraries | NestAsyncIO, Requests, Pandas                 |
 
 ---
 
+## 📥 Output
+
+After execution, the project generates a file:
 
 
+financial_sentiment_reports.txt
 
 
-### Output
-You’ll get a file named `financial_sentiment_reports.txt` with detailed reports like:
+Each entry includes:
 
-```
+
 Query:
-How to invest in the EV sector?
+What are the financial risks in the EV sector?
 
 Context:
-[Tailored context from real-time news and market reports]
+[Relevant extracted content from financial news]
 
 Generated Report:
-- Highlights recent EV market performance
-- Key positive/negative trends
-- Investment suggestions based on current sentiment
-```
+- Summarizes key risks and trends
+- Analyzes investor sentiment (positive/negative/neutral)
+- Offers suggestions for investors and stakeholders
 
----
+
 
 ## 📌 Takeaways
 
 ✅ Learn how to:
+
 - Build AI-powered finance tools using **LLMs + Knowledge Graphs**
-- Scrape & structure unstructured data
-- Leverage **Neo4j + LlamaIndex + GPT-4o** for real-world use cases  
-- Apply **RAG architecture** for domain-specific insight generation
+- Scrape and structure unstructured real-time financial data
+- Implement Retrieval-Augmented Generation using **Neo4j + LLaMA**
+- Run a **fully local, open-source LLM stack** (no OpenAI required)
 
 ---
+
+
+
+
+
 
 
 
