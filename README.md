@@ -86,10 +86,10 @@ Run `graph_store_creation.py`:
 python src/graph_store_creation.py
 ```
 
-✅ Generates search queries from input
-✅ Collects web data via Google Search + scraping
-✅ Creates Neo4j property graph with entities + relations
-✅ Persists LlamaIndex index to `./storage`
+- ✅ Generates search queries from input
+- ✅ Collects web data via Google Search + scraping
+- ✅ Creates Neo4j property graph with entities + relations
+- ✅ Persists LlamaIndex index to `./storage`
 
 ---
 
@@ -101,10 +101,10 @@ Run `engine.py`:
 python engine.py
 ```
 
-✅ Runs predefined financial queries
-✅ Retrieves relevant graph context
-✅ Uses OpenAI to summarize + analyze sentiment
-✅ Outputs reports to `financial_sentiment_reports.txt`
+- ✅ Runs predefined financial queries
+- ✅ Retrieves relevant graph context
+- ✅ Uses OpenAI to summarize + analyze sentiment
+- ✅ Outputs reports to `financial_sentiment_reports.txt`
 
 ---
 
@@ -116,8 +116,8 @@ Open:
 notebook/updated_market_data_analysis.ipynb
 ```
 
-✅ Explore dataset, embeddings, and graph insights
-✅ Run custom analysis + visualizations
+- ✅ Explore dataset, embeddings, and graph insights
+- ✅ Run custom analysis + visualizations
 
 ---
 
